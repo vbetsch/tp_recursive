@@ -1,0 +1,16 @@
+/*!40101 SET NAMES utf8 */;
+/*!40014 SET FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET SQL_NOTES=0 */;
+DROP DATABASE IF EXISTS test_recursive;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ test_recursive /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
+USE test_recursive;
+
+DROP TABLE IF EXISTS _recursive;
+CREATE TABLE `_recursive` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',
+  `nom` varchar(32) NOT NULL,
+  `id_parent` int(11) DEFAULT NULL,
+  `href` varchar(128) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
